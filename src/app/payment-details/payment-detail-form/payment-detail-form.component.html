@@ -5,7 +5,7 @@
         <label> CARD OWNER NAME</label>
         <input class="form-control form-control-lg"placeholder="Full Name"
         name="cardOwnerName" #cardOwnerName="ngModel"[(ngModel)]="service.formData.cardOwnerName"
-         required maxlength="7" minlength="2" [class.invalid]="cardOwnerName.invalid &&cardOwnerName.touched">
+         required maxlength="100" minlength="2" [class.invalid]="cardOwnerName.invalid &&cardOwnerName.touched">
     </div>
     <div class="form-group">
         <label> CARD NUMBER</label>
@@ -27,25 +27,14 @@
             required maxlength="5" minlength="5" [class.invalid]="expirationDate.invalid &&expirationDate.touched">
         </div>
     </div>
-    <div class="form row">
+    <br/>
+    <div class=" col-md-8 form row">
         <button class="btn btn-info btm-lg btn-block" type="submit"[disabled]="form.invalid">SUBMIT</button>
     </div>
    
     
 </form>
-<div class="container">
-    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <button routerLink= "employee"  
-            class="m-1 btn btn-light btn-outline-primary"Button>Vendor List</button>
-          </li>
-    
-          
-        </ul>
-      </nav>
-      
 
-</div>
+
 
  
